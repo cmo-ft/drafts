@@ -95,14 +95,6 @@ printf("Check sync 4. h_count[0]: %d\n", h_count[0]);
 
 
 
-	//vector<long*> d_absorb_num_ptrvec, h_absorb_num_ptrvec;
-	//d_absorb_num_ptrvec.push_back(nullptr);
-	//long* tmplongptr;
-
-	//long** d_absorb_num_ptrary = (long**)malloc(d_absorb_num_ptrvec.size() * sizeof(long*));
-	////d_absorb_num_ptrvec[0] = tmplongptr;
-	//CHECK(cudaMalloc((void**)&d_absorb_num_ptrary[0], grid.x * sizeof(long)));
-	////CHECK(cudaMalloc((void**)&tmplongptr, grid.x * sizeof(long)));
 
 
 	return 1;
