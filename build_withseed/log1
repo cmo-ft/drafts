@@ -1,0 +1,1334 @@
+
+**************************************************************
+ Geant4 version Name: geant4-10-06-patch-03 [MT]   (6-November-2020)
+  << in Multi-threaded mode >> 
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Reference Physics List QBBC 
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateQt (OGLIQt, OGLI)
+OpenGLStoredQt (OGLSQt, OGL, OGLS)
+OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK)
+OpenGLStoredX (OGLSX, OGLSQt_FALLBACK)
+RayTracerX (RayTracerX)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+Checking overlaps for volume Envelope (G4Box) ... OK! 
+Checking overlaps for volume Shape1 (G4Cons) ... OK! 
+Checking overlaps for volume Shape2 (G4Trd) ... OK! 
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+
+ionIoni:  for GenericIon  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      Stopping Power data for 17 ion/material pairs
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+ionIoni:  for alpha  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for anti_proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for anti_proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for kaon+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for kaon-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+muIoni:  for mu+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+muIoni:  for mu-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for pi+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for pi-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 1 GeV ---> 6 GeV
+        Model:            Binary Cascade: 0 eV  ---> 1.5 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+
+  Process: nKiller
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
+
+  Process: ionElastic
+        Model:          NNDiffuseElastic: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:     G4ParticleInelasticXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:     G4ParticleInelasticXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:     G4ParticleInelasticXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e+
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e-
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu+
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu-
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+  Process: muMinusCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 1 GeV ---> 6 GeV
+        Model:            Binary Cascade: 0 eV  ---> 1.5 GeV
+     Cr_sctns:     G4ParticleInelasticXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:     G4ParticleInelasticXS: 0 eV  ---> 100 TeV
+
+================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy (MeV)            0.1
+Pre-compound excitation high energy (MeV)           30
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy (keV)                         0.01
+Min energy per nucleon for multifragmentation (MeV) 2e+05
+Limit excitation energy for Fermi BreakUp (MeV)     20
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres (ns)             1000
+Internal e- conversion flag                         1
+Store e- internal conversion data                   0
+Electron internal conversion ID                     0
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+Upload data before 1st event for                Z < 9
+=======================================================================
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+G4WT0 > Event 0
+fEventSeed1: 47399124
+fEventSeed2: 33520851
+G4WT0 > ---- Step from time: 0to 0.250815 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.15
+G4WT0 > ---- Direction: 0, 0, 1
+G4WT0 > ---- Energy: 0.006
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.26979 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: -0.450779, -0.532991, 0.716044
+G4WT0 > ---- Energy: 0.00138436
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.379235 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.379235to 0.504776 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0923511, -0.0445484
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.270419 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: 0.113621, -0.993078, -0.0297661
+G4WT0 > ---- Energy: 0.000127999
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.272261 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: 0.122334, 0.144645, 0.981892
+G4WT0 > ---- Energy: 0.00461564
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.272261to 0.289757 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0776889, -0.0793658, -0.0686735
+G4WT0 > ---- Direction: 0.557422, 0.148303, 0.816876
+G4WT0 > ---- Energy: 0.00362705
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.289757to 0.298399 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.075208, -0.0798525, -0.0639062
+G4WT0 > ---- Direction: 0.266741, -0.148687, 0.95223
+G4WT0 > ---- Energy: 0.00270818
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.308411 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.560476, 0.165644, 0.811436
+G4WT0 > ---- Energy: 0.00178562
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.308411to 0.316049 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0728856, -0.0797481, -0.0590962
+G4WT0 > ---- Direction: 0.238989, -0.482512, 0.842654
+G4WT0 > ---- Energy: 0.00123309
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.316049to 0.321666 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0723624, -0.0808045, -0.0572514
+G4WT0 > ---- Direction: 0.108733, -0.814859, 0.56937
+G4WT0 > ---- Energy: 0.000814487
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.321666to 0.324906 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0721935, -0.0820706, -0.0563667
+G4WT0 > ---- Direction: 0.2506, -0.958971, 0.132566
+G4WT0 > ---- Energy: 0.000448733
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.324906to 0.325388 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0719874, -0.0828591, -0.0562577
+G4WT0 > ---- Direction: -0.443091, -0.515377, 0.733523
+G4WT0 > ---- Energy: 0.000104957
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.598412 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.41443, 0.423844, 0.80536
+G4WT0 > ---- Energy: 0.000485667
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.790444 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.623049, -0.70535, 0.33807
+G4WT0 > ---- Energy: 0.00028067
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.928714 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: -0.308002, -0.145394, 0.94021
+G4WT0 > ---- Energy: 0.000197135
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.987561 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.0673678, 0.89105, -0.448878
+G4WT0 > ---- Energy: 0.000123939
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 1.10019 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: -0.821081, 0.275072, -0.500162
+G4WT0 > ---- Energy: 0.000111134
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.20523 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: -0.915154, -0.267028, -0.301977
+G4WT0 > ---- Energy: 0.000107149
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.27142 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: 0.214713, 0.684245, 0.696927
+G4WT0 > ---- Energy: 8.0362e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.33366 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.127404, -0.952982, -0.274943
+G4WT0 > ---- Energy: 6.25072e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.34091 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: -0.744331, 0.666976, 0.0333814
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.34091to 1.49966 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0668578, -0.0749023, 0.0438571
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.49966to 1.59546 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0409012, 0.0471098
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.33369 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: 0.435242, -0.882617, -0.177628
+G4WT0 > ---- Energy: 1.09675e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.27147 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.0681875, 0.840721, 0.537158
+G4WT0 > ---- Energy: 1.78549e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.2053 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: -0.687973, -0.498765, -0.527187
+G4WT0 > ---- Energy: 2.67871e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.1002 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: 0.106473, 0.925575, -0.363282
+G4WT0 > ---- Energy: 3.98484e-06
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 0.98759 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: 0.720163, 0.693805, -0.000423872
+G4WT0 > ---- Energy: 1.28054e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.929012 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.184961, -0.491287, 0.851133
+G4WT0 > ---- Energy: 7.31953e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.7908 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: 0.775237, -0.557132, -0.297678
+G4WT0 > ---- Energy: 8.35352e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.599589 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.052646, 0.805175, 0.590696
+G4WT0 > ---- Energy: 0.000204997
+G4WT0 > 
+G4WT0 > Event 1
+fEventSeed1: 47399124
+fEventSeed2: 33520851
+G4WT0 > ---- Step from time: 0to 0.250815 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.15
+G4WT0 > ---- Direction: 0, 0, 1
+G4WT0 > ---- Energy: 0.006
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.26979 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: -0.450779, -0.532991, 0.716044
+G4WT0 > ---- Energy: 0.00138436
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.379235 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.379235to 0.504776 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0923511, -0.0445484
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.270419 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: 0.113621, -0.993078, -0.0297661
+G4WT0 > ---- Energy: 0.000127999
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.272261 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: 0.122334, 0.144645, 0.981892
+G4WT0 > ---- Energy: 0.00461564
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.272261to 0.289757 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0776889, -0.0793658, -0.0686735
+G4WT0 > ---- Direction: 0.557422, 0.148303, 0.816876
+G4WT0 > ---- Energy: 0.00362705
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.289757to 0.298399 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.075208, -0.0798525, -0.0639062
+G4WT0 > ---- Direction: 0.266741, -0.148687, 0.95223
+G4WT0 > ---- Energy: 0.00270818
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.308411 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.560476, 0.165644, 0.811436
+G4WT0 > ---- Energy: 0.00178562
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.308411to 0.316049 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0728856, -0.0797481, -0.0590962
+G4WT0 > ---- Direction: 0.238989, -0.482512, 0.842654
+G4WT0 > ---- Energy: 0.00123309
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.316049to 0.321666 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0723624, -0.0808045, -0.0572514
+G4WT0 > ---- Direction: 0.108733, -0.814859, 0.56937
+G4WT0 > ---- Energy: 0.000814487
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.321666to 0.324906 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0721935, -0.0820706, -0.0563667
+G4WT0 > ---- Direction: 0.2506, -0.958971, 0.132566
+G4WT0 > ---- Energy: 0.000448733
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.324906to 0.325388 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0719874, -0.0828591, -0.0562577
+G4WT0 > ---- Direction: -0.443091, -0.515377, 0.733523
+G4WT0 > ---- Energy: 0.000104957
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.598412 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.41443, 0.423844, 0.80536
+G4WT0 > ---- Energy: 0.000485667
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.790444 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.623049, -0.70535, 0.33807
+G4WT0 > ---- Energy: 0.00028067
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.928714 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: -0.308002, -0.145394, 0.94021
+G4WT0 > ---- Energy: 0.000197135
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.987561 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.0673678, 0.89105, -0.448878
+G4WT0 > ---- Energy: 0.000123939
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 1.10019 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: -0.821081, 0.275072, -0.500162
+G4WT0 > ---- Energy: 0.000111134
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.20523 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: -0.915154, -0.267028, -0.301977
+G4WT0 > ---- Energy: 0.000107149
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.27142 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: 0.214713, 0.684245, 0.696927
+G4WT0 > ---- Energy: 8.0362e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.33366 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.127404, -0.952982, -0.274943
+G4WT0 > ---- Energy: 6.25072e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.34091 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: -0.744331, 0.666976, 0.0333814
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.34091to 1.49966 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0668578, -0.0749023, 0.0438571
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.49966to 1.59546 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0409012, 0.0471098
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.33369 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: 0.435242, -0.882617, -0.177628
+G4WT0 > ---- Energy: 1.09675e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.27147 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.0681875, 0.840721, 0.537158
+G4WT0 > ---- Energy: 1.78549e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.2053 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: -0.687973, -0.498765, -0.527187
+G4WT0 > ---- Energy: 2.67871e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.1002 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: 0.106473, 0.925575, -0.363282
+G4WT0 > ---- Energy: 3.98484e-06
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 0.98759 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: 0.720163, 0.693805, -0.000423872
+G4WT0 > ---- Energy: 1.28054e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.929012 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.184961, -0.491287, 0.851133
+G4WT0 > ---- Energy: 7.31953e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.7908 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: 0.775237, -0.557132, -0.297678
+G4WT0 > ---- Energy: 8.35352e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.599589 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.052646, 0.805175, 0.590696
+G4WT0 > ---- Energy: 0.000204997
+G4WT0 > 
+G4WT0 > Event 2
+fEventSeed1: 47399124
+fEventSeed2: 33520851
+G4WT0 > ---- Step from time: 0to 0.250815 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.15
+G4WT0 > ---- Direction: 0, 0, 1
+G4WT0 > ---- Energy: 0.006
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.26979 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: -0.450779, -0.532991, 0.716044
+G4WT0 > ---- Energy: 0.00138436
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.379235 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.379235to 0.504776 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0923511, -0.0445484
+G4WT0 > ---- Direction: -0.531402, -0.284029, 0.798085
+G4WT0 > ---- Energy: 0.00125636
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.26979to 0.270419 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0825642, -0.0830319, -0.0707343
+G4WT0 > ---- Direction: 0.113621, -0.993078, -0.0297661
+G4WT0 > ---- Energy: 0.000127999
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.250815to 0.272261 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.08, -0.08, -0.0748074
+G4WT0 > ---- Direction: 0.122334, 0.144645, 0.981892
+G4WT0 > ---- Energy: 0.00461564
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.272261to 0.289757 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0776889, -0.0793658, -0.0686735
+G4WT0 > ---- Direction: 0.557422, 0.148303, 0.816876
+G4WT0 > ---- Energy: 0.00362705
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.289757to 0.298399 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.075208, -0.0798525, -0.0639062
+G4WT0 > ---- Direction: 0.266741, -0.148687, 0.95223
+G4WT0 > ---- Energy: 0.00270818
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.308411 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.560476, 0.165644, 0.811436
+G4WT0 > ---- Energy: 0.00178562
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.308411to 0.316049 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0728856, -0.0797481, -0.0590962
+G4WT0 > ---- Direction: 0.238989, -0.482512, 0.842654
+G4WT0 > ---- Energy: 0.00123309
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.316049to 0.321666 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0723624, -0.0808045, -0.0572514
+G4WT0 > ---- Direction: 0.108733, -0.814859, 0.56937
+G4WT0 > ---- Energy: 0.000814487
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.321666to 0.324906 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0721935, -0.0820706, -0.0563667
+G4WT0 > ---- Direction: 0.2506, -0.958971, 0.132566
+G4WT0 > ---- Energy: 0.000448733
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.324906to 0.325388 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0719874, -0.0828591, -0.0562577
+G4WT0 > ---- Direction: -0.443091, -0.515377, 0.733523
+G4WT0 > ---- Energy: 0.000104957
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.298399to 0.598412 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0745257, -0.0802328, -0.0614706
+G4WT0 > ---- Direction: 0.41443, 0.423844, 0.80536
+G4WT0 > ---- Energy: 0.000485667
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.790444 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.623049, -0.70535, 0.33807
+G4WT0 > ---- Energy: 0.00028067
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.928714 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: -0.308002, -0.145394, 0.94021
+G4WT0 > ---- Energy: 0.000197135
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.987561 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.0673678, 0.89105, -0.448878
+G4WT0 > ---- Energy: 0.000123939
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 1.10019 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: -0.821081, 0.275072, -0.500162
+G4WT0 > ---- Energy: 0.000111134
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.20523 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: -0.915154, -0.267028, -0.301977
+G4WT0 > ---- Energy: 0.000107149
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.27142 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: 0.214713, 0.684245, 0.696927
+G4WT0 > ---- Energy: 8.0362e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.33366 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.127404, -0.952982, -0.274943
+G4WT0 > ---- Energy: 6.25072e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.34091 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: -0.744331, 0.666976, 0.0333814
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.34091to 1.49966 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.0668578, -0.0749023, 0.0438571
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.49966to 1.59546 ****
+G4WT0 > ---- PGD ID: 22
+G4WT0 > ---- Position: -0.1, -0.0409012, 0.0471098
+G4WT0 > ---- Direction: -0.696371, 0.71442, 0.0683449
+G4WT0 > ---- Energy: 5.15397e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.33366to 1.33369 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0652416, -0.0763506, 0.0437846
+G4WT0 > ---- Direction: 0.435242, -0.882617, -0.177628
+G4WT0 > ---- Energy: 1.09675e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.27142to 1.27147 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.067619, -0.0585676, 0.0489151
+G4WT0 > ---- Direction: 0.0681875, 0.840721, 0.537158
+G4WT0 > ---- Energy: 1.78549e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.20523to 1.2053 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0718798, -0.072146, 0.0350851
+G4WT0 > ---- Direction: -0.687973, -0.498765, -0.527187
+G4WT0 > ---- Energy: 2.67871e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 1.10019to 1.1002 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0430625, -0.0637375, 0.044594
+G4WT0 > ---- Direction: 0.106473, 0.925575, -0.363282
+G4WT0 > ---- Energy: 3.98484e-06
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.987561to 0.98759 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0153383, -0.0730255, 0.0614823
+G4WT0 > ---- Direction: 0.720163, 0.693805, -0.000423872
+G4WT0 > ---- Energy: 1.28054e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.928714to 0.929012 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0141498, -0.0887452, 0.0694013
+G4WT0 > ---- Direction: -0.184961, -0.491287, 0.851133
+G4WT0 > ---- Energy: 7.31953e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.790444to 0.7908 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.00138241, -0.0827183, 0.0304275
+G4WT0 > ---- Direction: 0.775237, -0.557132, -0.297678
+G4WT0 > ---- Energy: 8.35352e-05
+G4WT0 > 
+G4WT0 > ---- Step from time: 0.598412to 0.599589 ****
+G4WT0 > ---- PGD ID: 11
+G4WT0 > ---- Position: -0.0372512, -0.0421115, 0.0109649
+G4WT0 > ---- Direction: 0.052646, 0.805175, 0.590696
+G4WT0 > ---- Energy: 0.000204997
+G4WT0 > 
+G4WT0 > 
+G4WT0 > --------------------End of Local Run------------------------
+G4WT0 >  The run consists of 3 gamma of 6 MeV
+G4WT0 >  Cumulated dose per run, in scoring volume : 0 picoGy  rms = 0 picoGy 
+G4WT0 > ------------------------------------------------------------
+G4WT0 > 
+
+--------------------End of Global Run-----------------------
+ The run consists of 3 
+ Cumulated dose per run, in scoring volume : 0 picoGy  rms = 0 picoGy 
+------------------------------------------------------------
+
+Graphics systems deleted.
+Visualization Manager deleting...
